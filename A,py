@@ -1,0 +1,5 @@
+score = 0
+height =1.8
+is_Winnning = True 
+
+print(f"YourScore = {score}, Your Height {height}.You are winning is {is_Winnning}")
