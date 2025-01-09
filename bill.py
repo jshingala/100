@@ -16,3 +16,22 @@ if number%2 == 0:
 
 else:
     print("It is Odd")
+bill =0
+age = 13
+
+if age< 12:
+    bill = 5
+    print("$ please")
+
+elif age <=18:
+    bill = 8
+    print("8$ please")
+
+else:
+    bill = 9
+    print("9$please")
+
+photo= input("Do you want the picture(y/n)")
+if photo=='y':
+    bill+= 3
+    print(bill)
