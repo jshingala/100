@@ -17,7 +17,7 @@ if number%2 == 0:
 else:
     print("It is Odd")
 bill =0
-age = 13
+age = 65
 
 if age< 12:
     bill = 5
@@ -26,6 +26,9 @@ if age< 12:
 elif age <=18:
     bill = 8
     print("8$ please")
+
+elif age>=45 and age<=67:
+    print("Enjot the ride is on us ")
 
 else:
     bill = 9
