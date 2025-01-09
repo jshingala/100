@@ -27,7 +27,15 @@ print('''Addams Family Mansion      _____
 print("Welcome to the game")
 print("Your mission is to find the treasure ")
 choice1= input('You are at a crossward, where do you want to go (left or right)').lower()
-if choice == 'left':
-    # continue the game
+if choice1 == 'left':
+    choice2= input('You see a big lake and nothing you can see in the nearby site choose "wait" or "swim"').lower()
+    if choice2 == 'wait':
+        choice3 =print('Now you see that somebody helped you to reach the castle now you see three doors "red" "blue" "green"')
+        if choice3 == 'green':
+            print("You found the treasure ")
+        else:
+            print("You found a dragon")
+    else:
+        print("You drowned you lost sorry about that ")
 else:
-    print("Yo have fell into the hole. Game Over")
+    print("You have fell into the hole. Game Over")
