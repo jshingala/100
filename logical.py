@@ -24,6 +24,9 @@ print('''Addams Family Mansion      _____
             '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
 ''')
 
+
+
+
 print("Welcome to the game")
 print("Your mission is to find the treasure ")
 choice1= input('You are at a crossward, where do you want to go (left or right)').lower()
