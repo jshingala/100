@@ -9,3 +9,8 @@ def greetWithNames(name):
     print(f"How are you {name}")
 
 greetWithNames("JeniL")
+
+def name(location, name):
+    print(f"Hello {name} \nWhat is it like in {location} ")
+
+name(123,"Jenil")
