@@ -14,7 +14,30 @@ def encrypt(originalText, shiftAmount):
             new_position = (position + shiftAmount) % 26
             newLetter+= alphabets[new_position]
             
-    print(f"The encoded code is ˜{''.join(newLetter)}")
+    print(f"The encoded code is {''.join(newLetter)}")
+def decrypt(originalText, shiftAmount):
+    newLetter = ""
+    for letter in originalText:
+        if letter == " ":
+            newLetter += letter
+        else:
+            position = alphabets.index(letter)
+            new_position = (position - shiftAmount) % 26
+            newLetter+= alphabets[new_position]
+    print(f"The decoded message is { ''.join(newLetter)}")
 
-if direction == "encode":
-    encrypt(originalText= text,shiftAmount=shift)
+def caeser(originalText, shiftAmount, encodeOrDecode):
+    newLetter = ""
+    for letter in originalText:
+        if letter == " ":
+            newLetter += letter
+        else:
+            position = alphabets.index(letter)
+            if encodeOrDecode == 'decode':
+                new_position = (position - shiftAmount) % 26
+            elif encodeOrDecode == 'encode':
+                new_position = (position + shiftAmount) % 26
+            newLetter+= alphabets[new_position]
+    print(f"The {encodeOrDecode}d message is { ''.join(newLetter)}")
+
+caeser(originalText= text, shiftAmount= shift, encodeOrDecode= direction )
