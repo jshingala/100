@@ -35,7 +35,6 @@ while start:
         # Call the function to find the winner
     else:
         print("Invalid choice.")
-        start = False  # Exit on invalid input
     
     # Clear the console (simulated with newlines)
     
