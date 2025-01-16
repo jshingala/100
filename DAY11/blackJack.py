@@ -5,13 +5,13 @@ def gameOver():
     if game == 'y':
         print("You are in ")
         gamePart1()
+        gamePart2()
     elif game == 'n':
         print("Bye")
     else:
         print("Invalid Choice")
-
+cards = [11,2,3,4,5,6,7,8,9,10,10,10]
 def gamePart1():
-    cards = [11,2,3,4,5,6,7,8,9,10,10,10]
     randomChoice= random.choices(cards, k =2)
     print(randomChoice)
     total = sum(randomChoice)
@@ -37,6 +37,26 @@ def gamePart1():
                     break
             else:
                 print("Invalid input. Please type 'h' to hit or 's' to stand.")
+def gamePart2():
+    botCard= []
+    botCard.append(random.choice(cards))
+    print(f"The dealer has {botCard}")
+    botCard.append(random.choice(cards))
+    total = sum(botCard)
+    print(f"{botCard}{total}")
 
-
+    if total == 21:
+        print("Dealer won the game it is a Black Jack ")
+    elif total <17:
+        while True:
+            botCard.append(random.choice(cards))
+            total = sum(botCard)
+            if total >21:
+                print(f"{botCard}Dealer went Over 21 it is a Burst{total}")
+                break
+            elif total < 17:
+                botCard.append(random.choice(cards))
+            else:
+                print(f"{botCard}{total}")
+                break
 gameOver()
