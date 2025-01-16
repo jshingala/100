@@ -1,3 +1,6 @@
+import art1  # Assuming you renamed the file to art1.py
+print(art1.logo)
+
 def cal():
     def add(n1, n2):
         return n1 + n2
