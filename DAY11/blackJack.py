@@ -1,5 +1,6 @@
 import random
-
+import art2 as a
+print(a.logo)
 # Initialize the cards
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10]
 
@@ -26,10 +27,13 @@ def blackjack_game():
 
                 if total == 21:
                     print("BlackJack! You won!")
+                    print(a.win)
                     return total, True
                 elif total > 21:
                     print("Bust! You went over 21.")
+                    print(a.lose)
                     return total, False
+    
             else:
                 print("Invalid input. Please type 'h' to hit or 's' to stand.")
 
@@ -40,6 +44,7 @@ def blackjack_game():
 
         if total == 21:
             print("Dealer has a BlackJack and wins!")
+            print(a.lose)
             return total
 
         while total < 17:
@@ -50,6 +55,7 @@ def blackjack_game():
 
             if total > 21:
                 print(f"Dealer went over 21. Dealer's cards: {bot_cards}, total: {total}")
+                print(a.lose)
                 return total
 
         print(f"Dealer stands with cards: {bot_cards}, total: {total}")
@@ -73,14 +79,19 @@ def blackjack_game():
 
     if dealer_total > 21:
         print("Dealer busts! You win!")
+        print(a.win)
     elif dealer_total == 21:
         print("Dealer wins with a BlackJack!")
+        print(a.lose)
     else:
         if player_total > dealer_total:
             print(f"You win! Your total: {player_total}, Dealer's total: {dealer_total}")
+            print(a.win)
         elif player_total < dealer_total:
             print(f"You lose! Your total: {player_total}, Dealer's total: {dealer_total}")
+            print(a.lose)
         else:
             print(f"It's a tie! Both you and the dealer have {player_total}.")
+            print(a.draw)
 
 blackjack_game()
