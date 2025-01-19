@@ -2,7 +2,7 @@ import random
 
 print("Welcome to the guessing game! Guess a number between 1 and 100")
 level = input("Enter the mode: 'e' for easy, 'm' for medium, 'h' for hard: ").lower()
-randomNumber = random.randint(1, 100)  # Generate a random number
+randomNumber = random.randint(1, 100)  
 
 if level == 'e':
     tries = 5
@@ -20,12 +20,12 @@ while tries > 0:
     guess = int(input("Guess the number: "))
     if guess == randomNumber:
         print("Congratulations! You guessed the correct number!")
-        break  
+        break
     elif guess > randomNumber:
         print("Your guess is too high.")
     else:
         print("Your guess is too low.")
-    tries -= 1  
+    tries -= 1
 
 
 if tries == 0:
