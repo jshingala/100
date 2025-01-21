@@ -30,6 +30,12 @@ resources = {
     "milk": 200,
     "coffee": 100,
 }
+def resources():
+    water = 10000
+    coffee= 100
+    Milk = 2000
+    print(f"Water ={water}ml Coffee = {coffee}g, Milk = {Milk}ml")
+
 
 
 while True:
@@ -47,6 +53,11 @@ while True:
             break
         elif userInput == 'q':
             print("Thank you so much I hope you have a great day ahead")
+            break
+        elif userInput == 'r':
+            resources()
+        elif userInput == 'o':
+            print("The machine is in Mantaincec")
             break
         else:
             raise ValueError("Invalid input. Please enter 'e', 'l', or 'c'.")
