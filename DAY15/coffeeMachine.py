@@ -23,6 +23,11 @@ MENU = {
         "cost": 3.0,
     }
 }
+i_am_operating_system = {
+    "water": 400,
+    "milk": 500,
+    "coffee": 700,
+}
 
 profit = 0
 resources = {
@@ -31,10 +36,8 @@ resources = {
     "coffee": 100,
 }
 
-def off():
-    print("What are the mauin reason for the inoput aws well as the output ")
 while True:
-    try:
+    try:    
         userInput = input("Enter your choice ('e' for Espresso, 'l' for Latte, 'c' for Cappuccino and q to quit): ").strip().lower()
         if userInput == 'e':
             print("Indeed you are getting the espresso shots")
@@ -42,21 +45,16 @@ while True:
         elif userInput == 'l':
             print("You are getting your Latte")
             break
-            print("Indeed you are getting your Cappuccino")
-            break
         elif userInput == 'q':
             print("Thank you so much I hope you have a great day ahead")
             break
         elif userInput == 'r':
-            print(f"water {resources['water']}\n milk {resources['milk']}\ncoffee")
+            print(f"water {resources['water']}\n milk {resources['milk']}\ncoffee {resources['coffee']}")
         elif userInput == 'c':
             print(f"The operating system that will be used in the operatung system {resources}")
         elif userInput == 'o':
-            off()
             break
         else:
             raise ValueError("Invalid input. Please enter 'e', 'l', or 'c'.")
     except ValueError as e:
         print(f"Error: {e}")
-    
-    off()
